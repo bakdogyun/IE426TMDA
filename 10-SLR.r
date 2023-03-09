@@ -2,7 +2,7 @@
 setwd('./')
 
 #import file
-mydata <- read.csv('./sample_data_1_it_firm.csv')
+mydata = read.csv('./sample_data_1_it_firm.csv')
 
 # plot
 plot(SALES ~ IT.STOCK, data = mydata)
@@ -10,7 +10,7 @@ plot(SALES ~ IT.STOCK, data = mydata)
 cor(mydata$SALES, mydata$IT.STOCK)
 
 # LRM
-regresult <- lm(formula = SALES ~ IT.STOCK, data = mydata)
+regresult = lm(formula = SALES ~ IT.STOCK, data = mydata)
 summary(regresult)
 
 # confint
@@ -22,9 +22,9 @@ regresult$residuals
 regresult$fitted.values
 
 #data frame
-newdf <- cbind(mydata$IT.STOCK, mydata$SALES, regresult$fitted.values, regresult$residuals)
+newdf = cbind(mydata$IT.STOCK, mydata$SALES, regresult$fitted.values, regresult$residuals)
 # convert dataframe
-colnames(newdf) <- c("obs x", "obs y", "fitted y", "residual")
-newdf <- data.frame(newdf)
+colnames(newdf) = c("obs x", "obs y", "fitted y", "residual")
+newdf = data.frame(newdf)
 
 abline(a=14.41633, b=0.766)
