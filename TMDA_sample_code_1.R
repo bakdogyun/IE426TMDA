@@ -1,7 +1,7 @@
 #경로 설정
 setwd("C:/Users/user/Dropbox/((KHU))/___Teaching (course)/2023_1_Spring/기술경영데이터분석/기경데_수업자료_2023/실습")
 #파일 불러오기
-mydata <- read.csv("sample_data_1_it_firm.csv", fileEncoding='euc-kr')
+mydata <- read.csv("./sample_data_1_it_firm.csv", fileEncoding='euc-kr')
 #산포도 그려보기
 plot(SALES ~ IT.STOCK, data=mydata)
 #상관관계 분석
